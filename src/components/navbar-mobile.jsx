@@ -4,7 +4,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 
 export default function NavbarMobile() {
   return (
-    <div className="w-full p-5 flex items-center gap-2 bg-white">
+    <div className="w-full sm:hidden p-5 flex items-center gap-2 bg-white">
       <div className="relative w-full">
         <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg" />
         <input

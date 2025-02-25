@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Banner1 from "../assets/banner-1.png";
-import Banner2 from "../assets/banner-2.png";
-import Banner3 from "../assets/banner-3.png";
+import Banner1 from "../assets/header-1.jpg";
+import Banner2 from "../assets/header-2.jpg";
+import Banner3 from "../assets/header-3.jpg";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const banners = [Banner1, Banner2, Banner3];
 
 const HeaderBanner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
@@ -25,9 +26,12 @@ const HeaderBanner = () => {
   }, []);
 
   return (
-    <div className="relative my-2 w-full mx-auto">
-
-      <div className="relative w-full h-[200px]">
+    <div
+      className="relative my-2 w-full sm:max-w-7xl sm:my-6 mx-auto"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative w-full h-[200px] sm:h-[400px]">
         <img
           src={banners[currentIndex]}
           alt={`Banner ${currentIndex + 1}`}
@@ -36,13 +40,15 @@ const HeaderBanner = () => {
       </div>
 
       <button
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
+        className={`absolute left-2 top-1/2 transform -translate-y-1/2 bg-white text-gray-400 p-2 rounded-full transition-all duration-500 ${isHovered ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+          }`}
         onClick={prevSlide}
       >
         <FaArrowLeft />
       </button>
       <button
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
+        className={`absolute right-2 top-1/2 transform -translate-y-1/2 bg-white text-gray-400 p-2 rounded-full transition-all duration-500 ${isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+          }`}
         onClick={nextSlide}
       >
         <FaArrowRight />

@@ -7,6 +7,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Homepage />,
   },
+  {
+    path: "*",
+    element: <Homepage />,
+  }
 ]);
 
 export default function App() {
