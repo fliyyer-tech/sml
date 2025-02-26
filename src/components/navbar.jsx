@@ -21,10 +21,10 @@ const Navbar = () => {
     const location = useLocation();
     return (
         <nav className='hidden sm:block w-full bg-white border-b-2 border-gray-200'>
-            <div className='max-w-7xl py-4 mx-auto flex items-center justify-between'>
+            <div className='max-w-7xl py-4 px-4 xl:px-0 mx-auto flex items-center justify-between'>
                 <div className='flex items-center gap-10'>
-                    <img src={Logo} alt='BSD CITY' className='w-28' />
-                    <ul className='flex gap-14'>
+                    <img src={Logo} alt='BSD CITY' className='w-20 lg:w-28' />
+                    <ul className='flex gap-4 lg:gap-14'>
                         {menu.map((item, i) => {
                             return (
                                 <Link
@@ -42,7 +42,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center gap-4 bg-white">
-                    <div className="relative w-full">
+                    <div className="relative w-56 lg:w-full">
                         <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg" />
                         <input
                             type="text"

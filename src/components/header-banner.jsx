@@ -27,7 +27,7 @@ const HeaderBanner = () => {
 
   return (
     <div
-      className="relative my-2 w-full sm:max-w-7xl sm:my-6 mx-auto"
+      className="relative px-5 xl:px-0 my-2 w-full sm:max-w-7xl sm:my-6 mx-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
