@@ -21,7 +21,7 @@ const HeaderBanner = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000);
+    const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -31,12 +31,24 @@ const HeaderBanner = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative w-full h-[200px] sm:h-[400px]">
-        <img
-          src={banners[currentIndex]}
-          alt={`Banner ${currentIndex + 1}`}
-          className="w-full h-full object-cover rounded-2xl transition-opacity duration-500"
-        />
+      <div className="relative w-full h-[200px] sm:h-[400px] overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {banners.map((banner, index) => (
+            <div
+              key={index}
+              className="min-w-full h-[200px] sm:h-[400px]"
+            >
+              <img
+                src={banner}
+                alt={`Banner ${index + 1}`}
+                className="w-full h-full object-cover rounded-2xl"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <button
@@ -58,7 +70,7 @@ const HeaderBanner = () => {
         {banners.map((_, index) => (
           <span
             key={index}
-            className={`h-3 w-3 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-500"
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-white" : "bg-gray-500"
               }`}
           />
         ))}
