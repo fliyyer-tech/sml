@@ -25,6 +25,10 @@ const Promos = () => {
       image: Promo1,
       title: "Gratis Ongkir ke Seluruh Indonesia!",
     },
+    {
+      image: Promo2,
+      title: "Cashback 30% dengan Kartu Kredit",
+    },
   ];
 
   const scrollLeft = () => {
@@ -36,31 +40,33 @@ const Promos = () => {
   };
 
   return (
-    <div className="w-full bg-gray-100 py-5 lg:py-10">
+    <div className="w-full py-5 lg:py-10">
       <div className="w-full md:max-w-7xl mx-auto px-4 md:px-8 lg:px-0">
         <div className="flex justify-between items-center">
           <h1 className="font-bold text-typography md:text-2xl">
             Promos Spesial
           </h1>
-          <button className="border md:hidden border-primary bg-primary/10 py-2 px-4 rounded-lg text-sm">
+          <button className="border border-none md:hidden  text-sm">
             Show More
           </button>
         </div>
 
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/3 hidden md:flex flex-col gap-4 text-center md:text-left">
-            <div className="flex justify-center items-center shadow-lg rounded-full bg-gradient-to-b from-primary to-primary/70 size-12">
-              <RiDiscountPercentFill className="text-3xl text-white" />
+          <div className="md:w-2/5 hidden md:flex flex-col gap-4 text-center md:text-left">
+            <div className="flex flex-row items-center gap-2">
+              <div className="flex justify-center items-center shadow-lg rounded-full bg-gradient-to-b from-primary to-primary/70 size-12">
+                <RiDiscountPercentFill className="text-3xl text-white" />
+              </div>
+              <h2 className="text-base md:text-2xl font-semibold text-typography/90">
+                Cek promonya <br />sekarang!
+              </h2>
             </div>
-            <h2 className="text-base md:text-xl font-semibold text-typography/90">
-              Cek promonya sekarang!
-            </h2>
             <button className="border w-fit border-primary bg-primary/10 py-2 px-6 md:px-8 rounded-lg text-sm md:text-base">
               Show More
             </button>
           </div>
 
-          <div className="w-full md:w-2/3 relative mt-6 md:mt-0">
+          <div className="w-full md:w-[80%] relative mt-6 md:mt-0">
             {allPromos.length > 3 && (
               <button
                 onClick={scrollLeft}

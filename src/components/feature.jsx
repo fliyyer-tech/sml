@@ -6,7 +6,7 @@ import Smlp from '../assets/smlp.png';
 
 const Feature = () => {
   return (
-    <section className="w-full md:max-w-7xl mx-auto px-5">
+    <section className="w-full md:hidden md:max-w-7xl mx-auto px-5">
       <div className='grid grid-cols-4 my-7 md:my-10'>
         <CardFeature icons={<MdEventAvailable className='size-6 md:size-12' />} title='Events & Festival' />
         <CardFeature icons={<IoChatbubblesOutline className='size-6 md:size-12' />} title='Chatroom' />
