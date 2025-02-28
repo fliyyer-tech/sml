@@ -40,7 +40,7 @@ const Promos = () => {
   };
 
   return (
-    <div className="w-full py-5 lg:py-10">
+    <div className="w-full py-5 lg:py-10 overflow-x-hidden">
       <div className="w-full md:max-w-7xl mx-auto px-4 md:px-8 lg:px-0">
         <div className="flex justify-between items-center">
           <h1 className="font-bold text-typography md:text-2xl">

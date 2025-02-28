@@ -20,6 +20,7 @@ import HeaderDesktop from '../components/header-desktop'
 import FeatureDesktop from '../components/feature-desktop'
 import StoryLayout from '../content/story'
 import ExploreLayout from '../content/explore'
+import Traffic from '../content/trafic'
 
 export default function Homepage() {
   return (
@@ -54,6 +55,7 @@ export default function Homepage() {
         <ExploreLayout />
         <Promos />
         <GetTrafic />
+        <Traffic />
       </section>
       <BottomNavigation />
       <Footer />

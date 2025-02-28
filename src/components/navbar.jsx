@@ -37,14 +37,14 @@ const Navbar = () => {
                 }`}
         >
             <div className="max-w-7xl py-4 px-4 xl:px-0 mx-auto flex items-center justify-between">
-                <div className="flex items-center gap-16">
-                    <img src={isScrolled ? Logo : Logo1} alt="BSD CITY" className="w-20 lg:w-20" />
-                    <ul className="flex gap-4 lg:gap-6">
+                <div className="flex items-center gap-8 lg:gap-16">
+                    <img src={isScrolled ? Logo : Logo1} alt="BSD CITY" className="w-16 lg:w-20" />
+                    <ul className="flex gap-3 lg:gap-6">
                         {menu.map((item, i) => (
                             <Link
                                 key={i}
                                 to={item.path}
-                                className={`relative text-xs font-medium capitalize transition-all duration-300 ${isScrolled ? "text-typography" : "text-[#fff]"
+                                className={`relative text-[10px] lg:text-xs font-medium capitalize transition-all duration-300 ${isScrolled ? "text-typography" : "text-[#fff]"
                                     } after:content-[''] after:absolute after:left-0 after:bottom-0 
                 after:w-full after:h-[2px] after:bg-yellow-500 after:scale-x-0 after:origin-right
                 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left`}
@@ -55,8 +55,8 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="flex items-center gap-4">
-                    <div className="relative w-56 lg:w-full">
+                <div className="flex items-center gap-2 lg:gap-4">
+                    <div className="relative w-32 lg:w-full">
                         <FaSearch
                             className={`absolute left-3 top-1/2 transform -translate-y-1/2 text-lg ${isScrolled ? "text-gray-400" : "text-white"
                                 }`}
@@ -68,12 +68,12 @@ const Navbar = () => {
                         `} />
                     </div>
                     <button
-                        className={`border border-gray-200 text-xs px-3 py-2 rounded-lg font-medium ${isScrolled ? "text-gray-400 hover:bg-gray-100" : "text-white border-white"
+                        className={`border border-gray-200 text-xs px-2 lg:px-3 py-2 rounded-lg font-medium ${isScrolled ? "text-gray-400 hover:bg-gray-100" : "text-white border-white"
                             }`}
                     >
                         EN
                     </button>
-                    <button className="bg-primary text-white px-6 py-2 rounded-lg text-xs font-medium">
+                    <button className="bg-primary transition-all duration-300 hover:bg-red-500 text-white px-4 lg:px-6 py-2 rounded-lg text-xs font-medium">
                         Login
                     </button>
                 </div>

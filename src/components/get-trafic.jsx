@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const GetTraffic = () => {
   return (
-    <div className="w-full px-5 lg:px-0 md:max-w-7xl mb-28 mx-auto flex flex-col md:my-5">
+    <div className="w-full md:hidden px-5 lg:px-0 md:max-w-7xl mb-28 mx-auto flex flex-col md:my-5">
       <h1 className="font-bold text-typography md:text-2xl">
         BSD Traffic
       </h1>
