@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { RiDiscountPercentFill } from "react-icons/ri";
+import { IoIosArrowForward } from "react-icons/io";
 import Promo1 from "../assets/promo-1.png";
 import Promo2 from "../assets/promo-2.png";
 import Promo3 from "../assets/promo-3.png";
@@ -40,33 +40,19 @@ const Promos = () => {
   };
 
   return (
-    <div className="w-full py-5 lg:py-10 overflow-x-hidden">
-      <div className="w-full md:max-w-7xl mx-auto px-4 md:px-8 lg:px-0">
+    <div className="w-full py-5 overflow-x-hidden">
+      <div className="w-full mx-auto px-5">
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-typography md:text-2xl">
+          <h1 className="font-bold text-typography">
             Promos Spesial
           </h1>
-          <button className="border border-none md:hidden  text-sm">
-            Show More
+          <button className="border border-none flex items-center text-xs">
+            Show More <IoIosArrowForward />
           </button>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-2/5 hidden md:flex flex-col gap-4 text-center md:text-left">
-            <div className="flex flex-row items-center gap-2">
-              <div className="flex justify-center items-center shadow-lg rounded-full bg-gradient-to-b from-primary to-primary/70 size-12">
-                <RiDiscountPercentFill className="text-3xl text-white" />
-              </div>
-              <h2 className="text-base md:text-2xl font-semibold text-typography/90">
-                Cek promonya <br />sekarang!
-              </h2>
-            </div>
-            <button className="border w-fit border-primary bg-primary/10 py-2 px-6 md:px-8 rounded-lg text-sm md:text-base">
-              Show More
-            </button>
-          </div>
-
-          <div className="w-full md:w-[80%] relative mt-6 md:mt-0">
+        <div className="flex flex-col items-center">
+          <div className="w-full relative mt-6">
             {allPromos.length > 3 && (
               <button
                 onClick={scrollLeft}
@@ -84,18 +70,13 @@ const Promos = () => {
               {allPromos.map((promo, index) => (
                 <div
                   key={index}
-                  className="snap-center min-w-[75%] sm:min-w-[300px] bg-white shadow-lg rounded-3xl overflow-hidden"
+                  className="snap-center min-w-[100%] bg-white shadow-lg rounded-3xl overflow-hidden"
                 >
                   <img
                     src={promo.image}
                     alt={promo.title}
-                    className="w-full rounded-t-3xl h-40 object-cover"
+                    className="w-full rounded-t-3xl h-48 object-cover"
                   />
-                  <div className="p-3">
-                    <h3 className="text-sm font-semibold text-gray-800">
-                      {promo.title}
-                    </h3>
-                  </div>
                 </div>
               ))}
             </div>

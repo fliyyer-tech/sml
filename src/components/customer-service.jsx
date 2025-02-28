@@ -1,36 +1,38 @@
 import { useState } from "react";
-import { BsChatDotsFill } from "react-icons/bs";
+import { BsChatDots } from "react-icons/bs";
 import { MdClose, MdContactSupport } from "react-icons/md";
-import { RiCustomerService2Fill } from "react-icons/ri";
+import CSimg from '../assets/cs.png';
 
 const CustomerService = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="fixed bottom-36 right-6 md:bottom-10 md:right-10 z-50">
+        <div className="fixed bottom-24 right-0 md:bottom-10 md:right-0 z-50">
             <div
-                className={`absolute bottom-16 right-0 bg-white shadow-lg rounded-lg w-48 p-3 transition-all duration-300 ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"
-                    }`}
+                className={`absolute bottom-16 right-0 bg-white shadow-lg rounded-lg w-48 p-3 transition-all duration-300 
+                    ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10 pointer-events-none"}`}
             >
-                <button
-                    className="flex items-center w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition"
-                >
-                    <BsChatDotsFill className="text-yellow-500 text-lg mr-3" />
+                <button className="flex items-center w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition">
+                    <BsChatDots className="text-yellow-500 text-lg mr-3" />
                     BSD Chat
                 </button>
-                <button
-                    className="flex items-center w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition"
-                >
+                <button className="flex items-center w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition">
                     <MdContactSupport className="text-yellow-500 text-lg mr-3" />
                     Contact Us
                 </button>
             </div>
 
             <button
-                className="w-14 h-14 md:w-16 md:h-16 bg-yellow-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-yellow-600 transition-all"
+                className="flex items-center bg-yellow-500 text-white py-3 px-5 rounded-l-full shadow-lg hover:bg-yellow-600 transition-all"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                {isOpen ? <MdClose className="text-3xl" /> : <RiCustomerService2Fill className="text-2xl" />}
+                {isOpen ? (
+                    <MdClose className="text-2xl" />
+                ) : (
+                    <>
+                        <img src={CSimg} alt="Customer Service" className="w-8" />
+                    </>
+                )}
             </button>
         </div>
     );

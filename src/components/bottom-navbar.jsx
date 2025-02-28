@@ -35,7 +35,7 @@ const BottomNavigation = () => {
   ];
 
   return (
-    <div className="fixed sm:hidden bottom-0 left-0 w-full px-4">
+    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full md:max-w-[432px] px-4">
       <div className="w-full bg-white shadow-3xl rounded-t-2xl p-4 flex justify-between items-center">
         {menu.slice(0, 2).map((item, index) => (
           <Link

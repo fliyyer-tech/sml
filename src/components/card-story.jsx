@@ -3,7 +3,7 @@ import Story from '../assets/story-1.png'
 const CardStory = (props) => {
   const { title, image } = props
   return (
-    <div className='relative min-w-[120px] cursor-pointer rounded-3xl h-[160px] md:h-96 overflow-hidden group'>
+    <div className='relative min-w-[120px] cursor-pointer rounded-3xl h-[160px]  overflow-hidden group'>
       <img
         src={image ? image : Story}
         className='absolute inset-0 rounded-3xl w-full h-full object-cover transition-transform duration-500 transform group-hover:scale-110'

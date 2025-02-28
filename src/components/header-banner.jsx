@@ -27,11 +27,11 @@ const HeaderBanner = () => {
 
   return (
     <div
-      className="relative md:hidden px-5 xl:px-0 my-2 w-full sm:max-w-7xl sm:my-6 mx-auto"
+      className="relative px-5 my-2 w-full mx-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative w-full h-[200px] sm:h-[400px] overflow-hidden">
+      <div className="relative w-full h-[200px] overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -39,7 +39,7 @@ const HeaderBanner = () => {
           {banners.map((banner, index) => (
             <div
               key={index}
-              className="min-w-full h-[200px] sm:h-[400px]"
+              className="min-w-full h-[200px] "
             >
               <img
                 src={banner}
