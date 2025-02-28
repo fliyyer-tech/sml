@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Banner1 from "../assets/header-1.jpg";
-import Banner2 from "../assets/header-2.jpg";
-import Banner3 from "../assets/header-3.jpg";
+import Banner1 from "../assets/banner-1.png";
+import Banner2 from "../assets/banner-2.png";
+import Banner3 from "../assets/banner-3.png";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const banners = [Banner1, Banner2, Banner3];
@@ -44,7 +44,7 @@ const HeaderBanner = () => {
               <img
                 src={banner}
                 alt={`Banner ${index + 1}`}
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
           ))}

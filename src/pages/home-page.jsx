@@ -14,11 +14,6 @@ import Explore2 from "../assets/explore-2.png";
 import CustomerService from '../components/customer-service'
 import Promos from '../components/promos'
 import GetTrafic from '../components/get-trafic'
-import Footer from '../components/footer'
-import FeatureDesktop from '../components/feature-desktop'
-import StoryLayout from '../content/story'
-import ExploreLayout from '../content/explore'
-import Traffic from '../content/trafic'
 
 export default function Homepage() {
   return (
